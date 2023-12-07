@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="style.css"> 
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main>
+        <h1>Wow you created a new Hanzi!</h1>
+        <p>Now you can come up with your own definitions about it</p>
+
+        <!-- form -->
+        <form id = 'form' action = "/submit-form" method ='post'>
+            <div>
+            <label for='user-name'>Name:</label>
+            <input type='text' id='user-name' name="name" required>
+            </div>
+
+            <div>
+            <label for = 'user-message'>Definition:</label>
+            <textarea id ='user-message' name="message" required></textarea>
+            </div>
+
+
+            <button id="submit">submit</button>
+        </form>
+
+        
+    </main>
+    
+    <footer>
+      
+    </footer>
+
+</body>
+</html>

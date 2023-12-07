@@ -22,12 +22,9 @@
     
         window.requestAnimationFrame(loopFiveSeconds);
 
-        // append elements to the DOM
+        // display webcam result on the canvas
         document.getElementById("webcam-container").appendChild(webcam.canvas);
-        labelContainer = document.getElementById("label-container");
-        for (let i = 0; i < maxPredictions; i++) { // and class labels
-            labelContainer.appendChild(document.createElement("div"));
-        }
+
     }
 
 
@@ -54,6 +51,13 @@
         let highestP = 0;
         let classification = "";
         for (let key in ap) {
+
+        //see average probability of all classes
+            if (ap.hasOwnProperty(key)) { 
+                console.log(`${key}: ${ap[key].average}`);
+            }
+
+        //highest average
             if (ap[key].average > highestP) {
                 highestP = ap[key].average;
                 classification = key;
@@ -61,34 +65,23 @@
         }
         console.log(classification);
 
-        //switch case
-        /*
+        //add classification result to DOM
+        let result = document.getElementById("result");
+        result.innerHTML = `Classification Result: ${classification}`;
+
+        //ADD MORE: switch cases
         if (classification == "kun"){
-            //go to kun's page
+            window.location.href = 'words/kun.html';
+        } else if (classification == "xing"){
+            window.location.href = 'words/xing.html';
+        } else if (classification == "others"){
+            window.location.href = "input.html";
         }
-        */
     
     }
-
-
-    
-        /*
-        const highestAverage = ()=>{
-        for (let i=0; i< ap.)
-        const sortedPrediction = ap[i].average.sort((a,b) => -a.probability + b.probability);
-
-    /*
-    async function loop() {
-        webcam.update(); // update the webcam frame
-        await predict();
-
-        //reuqest animation frame run again to form a loop
-        window.requestAnimationFrame(loop);
-    }
-    */
 
     // run the webcam image through the image model
-    let ap = {};
+    let ap = {}; //empty object for storing avg val
 
     async function predict() {
         // predict can take in an image, video or canvas html element
@@ -96,9 +89,11 @@
         for (let i = 0; i < maxPredictions; i++) {
             const className = prediction[i].className;
             const probability = prediction[i].probability.toFixed(2);
+
+            /*
             const classPrediction =
                 className + ": " + probability;
-            labelContainer.childNodes[i].innerHTML = classPrediction;
+            */    
 
             //accumulated probability
             if(!ap[className]){
@@ -133,7 +128,59 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = 'detection.html';
     });
     }
-})
+
+    const toWaiting = document.getElementById('toWaiting');
+    if (toWaiting){
+        toWaiting.addEventListener('click', function() {
+        window.location.href = 'waiting.html';
+    }
+)}
+
+    const webcamContainer = document.getElementById('webcam-container');
+    if (webcamContainer){
+        init();
+    }
+
+    //form submission
+    const form = document.getElementById('form');
+    if (form){
+    form.addEventListener('submit',(e) =>{
+        e.preventDefault();
+
+        const formData = {
+            name: document.getElementById('user-name').value,
+            message: document.getElementById('user-message').value
+        };
+
+        fetch('/submit-form',{
+            method: 'POST',
+            headers:{
+                'Content-Type':'application/json', 
+            },
+            body: JSON.stringify(formData),
+        })
+        .then(response =>{
+            if(response.ok){
+                return  response.json(); 
+            }
+            throw new Error('Network reponse was not ok.')
+        })
+        .then(data =>{
+            console.log('Success', data);
+            localStorage.setItem('formData',JSON.stringify(formData));
+            //go to next page
+            window.location.href = 'archive.html';
+        })
+        .catch ((error) =>{
+            console.error('error',error);
+        })
+    })
+    }
+
+
+    })
+
+    
 
     
     
