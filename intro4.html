@@ -10,43 +10,46 @@
 <body>
     <main>
 
+
         <div class = "page-container"> 
             <div class = 'image-container'>
-                <img src ='assets/intro.png' alt = 'introduce hanzi "木"'>
+                <img src ='assets/intro4.png' alt = 'introduce hanzi "田字格"'>
             </div>
 
-            <button id="mu" class = 'audio-button'>mù
-                <span class="speaker-icon">🔊</span>
-            </button>
-            <button id="toIntro2" class = 'buttons'></button>
-            <button id="backFirstPage" class='buttons2'></button>
+            <button id="toDetection" class = 'buttons'></button>
+            <button id="toIntro3" class='buttons2'></button>
     
         </div>
-
-
         
     </main>
     
     <footer>
       
     </footer>
-
+    
     <script>
         document.addEventListener('keydown', function(event) {
         if (event.key === 'Enter' || event.key === 'ArrowRight') {
-        window.location.href = 'intro2.html'; 
+        window.location.href = 'detection.html'; 
         }
 
         if(event.key === 'ArrowLeft'){
-            window.location.href = 'index.html';
+            window.location.href = 'intro3.html';
         }
 
         });
 
-        const backFirstPage = document.getElementById('backFirstPage');
-        backFirstPage.addEventListener('click',()=>{
-            window.location.href = 'index.html';
+        const toIntro3 = document.getElementById('toIntro3');
+        toIntro3.addEventListener('click',()=>{
+            window.location.href = 'intro3.html';
         })
+
+        const toDetection = document.getElementById('toDetection');
+        toDetection.addEventListener('click',()=>{
+            window.location.href = 'detection.html';
+        })  
+
+        
     
         </script>
 

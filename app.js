@@ -21,12 +21,12 @@ app.post('/submit-form', (req, res) => {
 
   const name = req.body.name;
   const message = req.body.message;
+  const image = req.body.image;
 
-  console.log(name,message);
 
   // Save the data to a JSON file
   const filePath = 'data.json';
-  const dataToSave = { name, message };
+  const dataToSave = { name, message,image };
 
   // Read the existing data
   fs.readFile(filePath, (err, data) => {
@@ -51,6 +51,7 @@ app.post('/submit-form', (req, res) => {
         return;
       }
       console.log('Data written to file');
+      res.json({success: true, message: 'Data written to file'})
     });
   });
 });

@@ -9,10 +9,20 @@
 </head>
 <body>
     <main>
-        <h1>How to Play</h1>
-        <p>This page introduces how to use 田字格.</p>
-        <!-- Add more content here -->
-        <button id="toDetection">Next</button>
+
+
+        <div class = "page-container"> 
+            <div class = 'image-container'>
+                <img src ='assets/intro2.png' alt = 'introduce hanzi "口"'>
+            </div>
+
+            <button id="kou" class = 'audio-button'> kǒu
+                <span class="speaker-icon">🔊</span>
+            </button>
+            <button id="toIntro3" class = 'buttons'></button>
+            <button id="toIntro" class='buttons2'></button>
+    
+        </div>
         
     </main>
     
@@ -20,7 +30,30 @@
       
     </footer>
     
-    <!-- Add JavaScript Files -->
+    <script>
+        document.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter' || event.key === 'ArrowRight') {
+        window.location.href = 'intro3.html'; 
+        }
+
+        if(event.key === 'ArrowLeft'){
+            window.location.href = 'intro.html';
+        }
+
+        });
+
+        const toIntro = document.getElementById('toIntro');
+        toIntro.addEventListener('click',()=>{
+            window.location.href = 'intro.html';
+        })
+
+        const toIntro3 = document.getElementById('toIntro3');
+        toIntro3.addEventListener('click',()=>{
+            window.location.href = 'intro3.html';
+        })
+        
+    
+        </script>
 
 </body>
 </html>

@@ -1,18 +1,6 @@
 [
   {
-    "name": "Sample Name",
-    "message": "Sample message"
-  },
-  {
-    "name": "sky",
-    "message": "testtest"
-  },
-  {
-    "name": "sky",
-    "message": "testoutput"
-  },
-  {
-    "name": "sky",
-    "message": "testOutput2"
+    "name": "sample",
+    "message": "sample"
   }
 ]

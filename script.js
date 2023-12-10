@@ -1,4 +1,4 @@
-    const URL = "https://teachablemachine.withgoogle.com/models/eL3opRC4o/";
+    const URL = "https://teachablemachine.withgoogle.com/models/0bDNiGv6F/";
 
     let model, webcam, labelContainer, maxPredictions;
 
@@ -38,10 +38,10 @@
         await predict();
 
 
-        if (Date.now() - startTime < 5000){
+        if (Date.now() - startTime < 10000){
             window.requestAnimationFrame(loopFiveSeconds);
         } else{
-            console.log('Stop the loop after 5 seconds.');
+            console.log('Stop the loop after 10 seconds.');
             classification();
         }
     }
@@ -65,20 +65,48 @@
         }
         console.log(classification);
 
-        //add classification result to DOM
+        //add classification result to DOM //just for debugging delete later
         let result = document.getElementById("result");
         result.innerHTML = `Classification Result: ${classification}`;
 
-        //ADD MORE: switch cases
+        //ADD MORE: switch cases & don't forget to add the "blank" case
+        
         if (classification == "kun"){
             window.location.href = 'words/kun.html';
         } else if (classification == "xing"){
             window.location.href = 'words/xing.html';
+        } else if (classification == "kou"){
+            window.location.href = 'words/kou.html';
+        } else if (classification == "mu"){
+            window.location.href = 'words/mu.html';
+        } else if (classification == "hui"){
+            window.location.href = 'words/hui.html';
+        } else if (classification == "lv"){
+            window.location.href = 'words/lv.html';
+        } else if (classification == "lin"){
+            window.location.href = 'words/lin.html';
+        } else if (classification == "seng"){
+            window.location.href = 'words/seng.html';
+        } else if (classification == "kun"){
+            window.location.href = 'words/kun.html';
         } else if (classification == "others"){
+            snapPhoto();
+            //console.log(capturedImageDataUrl);
             window.location.href = "input.html";
-        }
-    
+        } 
+        
     }
+
+    function snapPhoto(){
+        const canvas = document.getElementById('canvas');
+        const context = canvas.getContext('2d');
+        context.drawImage(webcam.canvas,0,0,canvas.width, canvas.height);
+
+        const capturedImageDataUrl = canvas.toDataURL('image/png');
+
+        localStorage.setItem('image',capturedImageDataUrl);
+    }
+    
 
     // run the webcam image through the image model
     let ap = {}; //empty object for storing avg val
@@ -106,13 +134,17 @@
     }
 
 
-//button events
+
+//button events & fetch data
 document.addEventListener('DOMContentLoaded', function() {
     const toIntro = document.getElementById('toIntro');
     if (toIntro){
         toIntro.addEventListener('click', function() {
         window.location.href = 'intro.html';
     });
+
+    
+
     }
 
     const toIntro2 = document.getElementById('toIntro2');
@@ -141,16 +173,20 @@ document.addEventListener('DOMContentLoaded', function() {
         init();
     }
 
-    //form submission
     const form = document.getElementById('form');
+    //form submission and fetch data
     if (form){
     form.addEventListener('submit',(e) =>{
         e.preventDefault();
+        console.log('Form submission started');
+
 
         const formData = {
             name: document.getElementById('user-name').value,
-            message: document.getElementById('user-message').value
+            message: document.getElementById('user-message').value,
         };
+
+        console.log('sending fetch request');
 
         fetch('/submit-form',{
             method: 'POST',
@@ -167,9 +203,10 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(data =>{
             console.log('Success', data);
+            console.log('local storage set, navigating to next page');
             localStorage.setItem('formData',JSON.stringify(formData));
-            //go to next page
             window.location.href = 'archive.html';
+            
         })
         .catch ((error) =>{
             console.error('error',error);
@@ -177,8 +214,21 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     }
 
+    //display user entry
 
-    })
+    /*
+    const storedFormData = JSON.parse(localStorage.getItem('formData'));
+    const displayName = document.getElementById('displayName');
+    const displayMessage = document.getElementById('displayMessage');
+
+    if (storedFormData && displayName && displayMessage){
+        displayName.textContent = storedFormData.name;
+        displayMessage.textContent = storedFormData.message;
+    }
+    
+    }
+    */
+})
 
     
 

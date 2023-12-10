@@ -13,7 +13,7 @@
         <p>Now you can come up with your own definitions about it</p>
 
         <!-- form -->
-        <form id = 'form' action = "/submit-form" method ='post'>
+        <form id = 'form'>
             <div>
             <label for='user-name'>Name:</label>
             <input type='text' id='user-name' name="name" required>
@@ -25,15 +25,32 @@
             </div>
 
 
-            <button id="submit">submit</button>
+            <button type ='submit' id="submit">submit</button>
         </form>
 
+        <img id = 'captured-image' alt = 'captured image'>
+        
         
     </main>
     
     <footer>
       
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        // Retrieve image data URL from local storage or global variable
+        const imageDataUrl = localStorage.getItem('image');
+    
+        if (imageDataUrl) {
+            const imageElement = document.getElementById('captured-image');
+            if (imageElement) {
+                imageElement.src = imageDataUrl;
+                imageElement.style.display = 'block'; // Display the image
+            }
+        }
+    });
+    </script>
 
 </body>
 </html>

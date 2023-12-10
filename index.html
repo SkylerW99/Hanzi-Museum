@@ -9,16 +9,33 @@
 </head>
 <body>
     <main>
-        <h1>Welcome to Hanzi Museum</h1>
-        <p>Here's some introduction about the Hanzi museum.</p>
-        <!-- Add more content here -->
-        <button id="toIntro">Next</button>
+    <div class = "page-container"> 
+        <div class = 'image-container'>
+            <img src ='assets/welcome page.png' alt = 'welcome to Hanzi Museum image'>
+        </div>
+
+        <button id="toIntro" class = 'buttons'></button>
+
+    </div>
+
+        <!--
+        <button id="toIntro" >Next</button>
+    -->
         
     </main>
     
     <footer>
       
     </footer>
+
+    <script>
+    document.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter' || event.key === 'ArrowRight') {
+    window.location.href = 'intro.html'; // Change to your next page URL
+    }
+    });
+
+    </script>
 
 </body>
 </html>

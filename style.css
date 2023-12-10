@@ -1,7 +1,7 @@
 
 /*global css variables */
 :root {
-  --color-bg: white;
+  --color-bg: #ECE9E4;
   --color-text-main: #000000;
   --color-primary: #FFFF00;
   --wrapper-height: 87vh;
@@ -11,6 +11,11 @@
   --font-family-header: "HK Grotesk";
 }
 
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scroll due to overflow */
+}
 
 /* Basic page style resets */
 * {
@@ -42,4 +47,77 @@ body {
 /* Subheading */
 h2 {
   color: #2800FF;
+}
+
+.image-container {
+  width: 100vw;
+  height: 55vw; 
+  overflow: hidden;
+  position: relative; 
+}
+
+
+.image-container img {
+  width: 100%; /* makes the image fill the container */
+  height: auto; /* maintains the aspect ratio */
+  display: block; /* removes any default inline spacing */
+}
+
+.page-container {
+  position:relative;
+}
+
+.buttons {
+  background-image: url('assets/button_next.png');
+  background-size: cover;
+  background-color: transparent;
+  width: 5vw;  
+  min-width: 50px; 
+  height: 5vw;
+  min-height: 50px; 
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  position: absolute;
+  bottom: 5vh;
+  right: 5vw;
+}
+
+.buttons2{
+  background-image: url('assets/button_back.png');
+  background-size: cover;
+  background-color: transparent;
+  width: 5vw;  
+  min-width: 50px; 
+  height: 5vw;
+  min-height: 50px; 
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  position: absolute;
+  bottom: 5vh;
+  left: 5vw;
+}
+
+.audio-button {
+  background-color: #d2b48c; 
+  border: none;
+  border-radius: 4vw; 
+  padding: 1vw 2vw; 
+  font-family: Arial, sans-serif;
+  font-size: 2vw; 
+  color: black; 
+  cursor: pointer; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top:51%;
+  left:20%;
+
+}
+
+.speaker-icon {
+  margin-left: 10px; 
 }
