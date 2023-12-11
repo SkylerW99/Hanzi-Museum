@@ -15,6 +15,7 @@ body, html {
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* Prevents horizontal scroll due to overflow */
+  height:100%;
 }
 
 /* Basic page style resets */
@@ -50,17 +51,15 @@ h2 {
 }
 
 .image-container {
-  width: 100vw;
-  height: 55vw; 
-  overflow: hidden;
-  position: relative; 
+  width: 100%; 
+  height: 100%; 
+  overflow: hidden; 
 }
 
-
 .image-container img {
-  width: 100%; /* makes the image fill the container */
-  height: auto; /* maintains the aspect ratio */
-  display: block; /* removes any default inline spacing */
+  width: 100%; /* Makes the image fill the container */
+  height: auto; /* Maintains aspect ratio */
+  display: block; 
 }
 
 .page-container {
@@ -99,6 +98,46 @@ h2 {
   left: 5vw;
 }
 
+.buttonOrange{
+  background-color: #FF6A00;
+  border: none;
+  color: white;
+  padding:1vw 4vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2vw;
+  margin: 2vw 1vw;
+  cursor: pointer;
+  border-radius: 4vw;
+  box-shadow: 4 4px #999;
+
+  position: absolute;
+  bottom: 3vh;
+  right: 5vw;
+}
+
+.buttonBlue{
+  background-color: #0038FF;
+  border: none;
+  color: white;
+  padding:1vw 4vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2vw;
+  margin: 2vw 1vw;
+  cursor: pointer;
+  border-radius: 4vw;
+  box-shadow: 4 4px #999;
+
+  position: absolute;
+  bottom: 3vh;
+  left: 5vw;
+}
+
+
+
 .audio-button {
   background-color: #d2b48c; 
   border: none;
@@ -121,3 +160,63 @@ h2 {
 .speaker-icon {
   margin-left: 10px; 
 }
+
+.formpage-container{
+  width: 100%; 
+  height: 100%;
+  padding-left:10%;
+
+}
+
+.page-title{
+  padding-top: 6%;
+
+}
+
+.content {
+  padding-top:2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width:80%;
+}
+
+.capturedImg {
+  flex: 1;
+  max-width: 40%; 
+  max-height:40%;
+}
+
+.capturedImg img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.form-container {
+  flex: 1;
+  max-width: 40%; 
+  max-height: 40%;
+
+}
+
+.input-group {
+  margin-bottom: 10%;
+}
+
+.input-group input{
+  height:10vh;
+  border:none;
+}
+
+.input-group label, .input-group input, .input-group textarea {
+  width: 100%;
+  display: block;
+}
+
+.input-group textarea {
+  height: 30vh; 
+  border:none;
+}
+

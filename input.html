@@ -9,26 +9,46 @@
 </head>
 <body>
     <main>
-        <h1>Wow you created a new Hanzi!</h1>
-        <p>Now you can come up with your own definitions about it</p>
 
-        <!-- form -->
-        <form id = 'form'>
-            <div>
-            <label for='user-name'>Name:</label>
-            <input type='text' id='user-name' name="name" required>
+
+
+
+
+
+    <div class="formpage-container">
+        <h1 class ='page-title'>WOW you created a new Hanzi!</h1>
+        <div class="content">
+            <div class = "capturedImg">
+                <img id = 'captured-image' alt = 'captured image'>
             </div>
 
+        <div class="form-container">
+            <form id = 'form'>
+                <div class='input-group'>
+                <label for='user-name'>Your name:</label>
+                <input type='text' id='user-name' name="name" >
+                </div>
+    
+                <div class="input-group">
+                <label for = 'user-message'>Craft your Hanzi's story: what does it represent for you? </label>
+                <textarea id ='user-message' name="message" ></textarea>
+                </div>
+                <div class='button-group'>
+                <button type ='submit' id="submit" class = 'buttonOrange'>Submit</button>
+                </div>
+            </form>
+
             <div>
-            <label for = 'user-message'>Definition:</label>
-            <textarea id ='user-message' name="message" required></textarea>
+                <button id="toDetection" class = 'buttonBlue' >Play Again</button>
             </div>
 
 
-            <button type ='submit' id="submit">submit</button>
-        </form>
+        </div>
 
-        <img id = 'captured-image' alt = 'captured image'>
+
+        </div>
+
+       </div>
         
         
     </main>

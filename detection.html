@@ -9,13 +9,33 @@
   </head>
   <body>
     
-      <h1>Need to update animation</h1>
-      <p>Now it's time to assemble your Hanzi on the grid, and please click the orange button when you finish.
+      <p>Now it's time to assemble your Hanzi on the grid, and please click the orange button when you finish. (need to
+        update)
       </p>
 
       <!-- Add more content here -->
-      <button type= "button" id= "toWaiting"> Finish </button>
+      <button type= "button" id= "toWaiting" class = 'buttonOrange'> Finish </button>
+      <button type= "button" id= "tointro4" class = 'buttons2'> </button>
 
+      <script>
+        document.addEventListener('keydown', function(event) {
+
+        if(event.key === 'ArrowLeft'){
+            window.location.href = 'intro4.html';
+        }
+
+        });
+
+        const toWaiting = document.getElementById('toWaiting');
+        if (toWaiting){
+        toWaiting.addEventListener('click', function() {
+        window.location.href = 'waiting.html';
+       }
+       )}
+
+        
+    
+        </script>
 
 
     

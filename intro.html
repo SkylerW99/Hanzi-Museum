@@ -11,10 +11,9 @@
     <main>
 
         <div class = "page-container"> 
-            <div class = 'image-container'>
+            <div class="image-container">
                 <img src ='assets/Intro.png' alt = 'introduce hanzi "木"'>
             </div>
-
             <button id="mu" class = 'audio-button'>mù
                 <span class="speaker-icon">🔊</span>
             </button>
@@ -47,6 +46,13 @@
         backFirstPage.addEventListener('click',()=>{
             window.location.href = 'index.html';
         })
+
+        const toIntro2 = document.getElementById('toIntro2');
+         if (toIntro2){
+        toIntro2.addEventListener('click', function() {
+        window.location.href = 'intro2.html';
+         });
+         }
     
         </script>
 

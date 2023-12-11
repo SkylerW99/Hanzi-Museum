@@ -23,7 +23,7 @@
         window.requestAnimationFrame(loopFiveSeconds);
 
         // display webcam result on the canvas
-        document.getElementById("webcam-container").appendChild(webcam.canvas);
+        //document.getElementById("webcam-container").appendChild(webcam.canvas);
 
     }
 
@@ -66,14 +66,16 @@
         console.log(classification);
 
         //add classification result to DOM //just for debugging delete later
-        let result = document.getElementById("result");
-        result.innerHTML = `Classification Result: ${classification}`;
+        //let result = document.getElementById("result");
+        //result.innerHTML = `Classification Result: ${classification}`;
 
         //ADD MORE: switch cases & don't forget to add the "blank" case
         
         if (classification == "kun"){
             window.location.href = 'words/kun.html';
-        } else if (classification == "xing"){
+        } else if (classification == "dai"){
+            window.location.href = 'words/dai.html';
+        }else if (classification == "xing"){
             window.location.href = 'words/xing.html';
         } else if (classification == "kou"){
             window.location.href = 'words/kou.html';
@@ -86,9 +88,9 @@
         } else if (classification == "lin"){
             window.location.href = 'words/lin.html';
         } else if (classification == "seng"){
-            window.location.href = 'words/seng.html';
-        } else if (classification == "kun"){
-            window.location.href = 'words/kun.html';
+            window.location.href = 'words/sen.html';
+        } else if (classification == "ping"){
+            window.location.href = 'words/ping.html';
         } else if (classification == "others"){
             snapPhoto();
             //console.log(capturedImageDataUrl);
@@ -137,36 +139,7 @@
 
 //button events & fetch data
 document.addEventListener('DOMContentLoaded', function() {
-    const toIntro = document.getElementById('toIntro');
-    if (toIntro){
-        toIntro.addEventListener('click', function() {
-        window.location.href = 'intro.html';
-    });
 
-    
-
-    }
-
-    const toIntro2 = document.getElementById('toIntro2');
-    if (toIntro2){
-        toIntro2.addEventListener('click', function() {
-        window.location.href = 'intro2.html';
-    });
-    }
-
-    const toDetection = document.getElementById('toDetection');
-    if (toDetection){
-        toDetection.addEventListener('click', function() {
-        window.location.href = 'detection.html';
-    });
-    }
-
-    const toWaiting = document.getElementById('toWaiting');
-    if (toWaiting){
-        toWaiting.addEventListener('click', function() {
-        window.location.href = 'waiting.html';
-    }
-)}
 
     const webcamContainer = document.getElementById('webcam-container');
     if (webcamContainer){
@@ -213,6 +186,25 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     })
     }
+
+
+    //start over & play again buttons
+    const startOver = document.getElementById('startOver');
+    if(startOver){
+    startOver.addEventListener('click',()=>{
+        window.location.href = '../index.html';
+    })
+    }
+
+    const toDetection = document.getElementById('toDetection');
+    
+    if(toDetection){
+    toDetection.addEventListener('click',()=>{
+        window.location.href = '../detection.html';
+    })
+    }
+
+
 
     //display user entry
 

@@ -10,17 +10,12 @@
 <body>
     <main>
     <div class = "page-container"> 
-        <div class = 'image-container'>
+        <div class="image-container">
             <img src ='assets/welcome-page.png' alt = 'welcome to Hanzi Museum image'>
         </div>
-
         <button id="toIntro" class = 'buttons'></button>
 
     </div>
-
-        <!--
-        <button id="toIntro" >Next</button>
-    -->
         
     </main>
     
@@ -34,6 +29,14 @@
     window.location.href = 'intro.html'; // Change to your next page URL
     }
     });
+
+    const toIntro = document.getElementById('toIntro');
+    if (toIntro){
+        toIntro.addEventListener('click', function() {
+        window.location.href = 'intro.html';
+    });
+
+    }
 
     </script>
 
