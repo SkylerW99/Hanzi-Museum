@@ -49,12 +49,27 @@ h1{
   line-height: 1.2;
 }
 
+h2{
+text-align: center;
+
+}
+
 p{
   font-size:1vw;
 }
 
 label{
   font-size:1vw;
+}
+
+ button{
+  transition: background-color 0.3s ease, transform 0.3s ease;
+ }
+
+
+button:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .image-container {
@@ -84,9 +99,13 @@ label{
   border: none;
   cursor: pointer;
   z-index: 10;
-  position: absolute;
-  bottom: 5vh;
+  position: fixed;
+  bottom: 8vh;
   right: 5vw;
+}
+.buttons:hover{
+  transform: scale(1.05);
+  box-shadow: none;
 }
 
 .buttons2{
@@ -100,13 +119,21 @@ label{
   border: none;
   cursor: pointer;
   z-index: 10;
-  position: absolute;
-  bottom: 5vh;
+  position: fixed;
+  bottom: 8vh;
   left: 5vw;
+
+}
+
+.buttons2:hover{
+  transform: scale(1.05);
+  box-shadow: none;
 }
 
 .buttonOrange{
   background-color: #FF6A00;
+  height:5vw;
+  min-height:50px;
   border: none;
   color: white;
   padding:1vw 4vw;
@@ -119,13 +146,16 @@ label{
   border-radius: 4vw;
   box-shadow: 4 4px #999;
 
-  position: absolute;
-  bottom: 3vh;
+  position: fixed;
+  bottom: 6vh;
   right: 5vw;
+  z-index:100;
 }
 
 .buttonBlue{
   background-color: #0038FF;
+  height:5vw;
+  min-height:50px;
   border: none;
   color: white;
   padding:1vw 4vw;
@@ -138,9 +168,10 @@ label{
   border-radius: 4vw;
   box-shadow: 4 4px #999;
 
-  position: absolute;
-  bottom: 3vh;
+  position: fixed;
+  bottom: 6vh;
   left: 5vw;
+  z-index:100;
 }
 
 
@@ -163,6 +194,10 @@ label{
   left:20%;
 
 }
+
+
+
+
 
 .speaker-icon {
   margin-left: 10px; 
@@ -236,7 +271,7 @@ label{
 .slideshow-container {
   max-width: 80%;
   position: relative;
-  margin-top:10vh;
+  margin-top: 10vh;
   margin-left: auto;
   margin-right: auto;
 }
@@ -248,15 +283,17 @@ label{
 
 /* Next & previous buttons */
 .prev, .next {
+  z-index:100;
   cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
   margin-top: -22px;
-  padding: 16px;
-  color: white;
+  padding: 1vw;
+  color: black;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 2vw;
+  font-family:HK Grotesk;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
@@ -270,7 +307,7 @@ label{
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(255,255,255,0.2);
 }
 
 /* Caption text */
@@ -319,4 +356,36 @@ label{
   from {opacity: .4}
   to {opacity: 1}
 }
+
+#loading_animation{
+    /* Size of the GIF */
+    width: 15vw; /* or any size you prefer */
+    height: auto; /* maintains aspect ratio */
+  
+    position: fixed; 
+    top: 40%; /* center vertically */
+    left: 50%; /* center horizontally */
+    transform: translate(-50%, -50%); /* adjust exact centering */
+}
+
+
+#progress_bar{
+  /* Size of the GIF */
+  width: 15vw; /* or any size you prefer */
+  height: auto; /* maintains aspect ratio */
+
+  position: fixed; 
+  top: 60%; /* center vertically */
+  left: 50%; /* center horizontally */
+  transform: translate(-50%, -50%); /* adjust exact centering */
+}
+
+
+#center-paragraph {
+  position: fixed;
+  top: 60%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+}
+
 

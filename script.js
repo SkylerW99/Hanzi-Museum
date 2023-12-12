@@ -222,10 +222,42 @@ document.addEventListener('DOMContentLoaded', function() {
     */
 })
 
+//carousel image selection
+document.addEventListener('DOMContentLoaded', function() {
+    let images = ['1.png', '2.png', '3.png', '4.png', '5.png', '6.png'];
+    let selectedImages = pickRandomImages(3, images);
+    createSlides(selectedImages);
+    showSlides(slideIndex);
+});
+
+function pickRandomImages(count, imageArray) {
+    let selected = new Set();
+    while (selected.size < count) {
+        let randomIndex = Math.floor(Math.random() * imageArray.length);
+        selected.add(imageArray[randomIndex]);
+    }
+    return Array.from(selected);
+}
+
+function createSlides(imageFilenames) {
+    const container = document.querySelector('.slideshow-container');
+    container.innerHTML += ''; // Clear existing slides if any
+    imageFilenames.forEach(filename => {
+        let slideDiv = document.createElement('div');
+        slideDiv.className = 'mySlides fade';
+        slideDiv.innerHTML = `<img src="assets/${filename}" style="width:100%">`;
+        container.appendChild(slideDiv);
+    });
+    /*
+    <a class="prev" onclick="plusSlides(-1)">&#10094; Prev</a>
+    <a class="next" onclick="plusSlides(1)">&#10095; Next</a>
+    */
+
+    showSlides(slideIndex);
+}
 
 //image slides
 let slideIndex = 1;
-showSlides(slideIndex);
 
 // Next/previous controls
 function plusSlides(n) {
@@ -249,9 +281,11 @@ function showSlides(n) {
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
+
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
 
     
 

@@ -29,6 +29,25 @@
       
     </footer>
 
+    <script>
+        const startOver = document.getElementById('startOver');
+        startOver.addEventListener('click',()=>{
+            window.location.href = '../index.html';
+        })
+
+        const toDetection = document.getElementById('toDetection');
+        toDetection.addEventListener('click',()=>{
+            window.location.href = '../detection.html';
+        })
+
+
+        document.getElementById('kun').addEventListener('click', function() {
+        var audio = new Audio('/assets/kun.mp3');
+        audio.play().catch(e => console.error(e));
+        });
+
+        </script>
+
 
 </body>
 </html>

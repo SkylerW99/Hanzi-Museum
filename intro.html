@@ -52,6 +52,11 @@
         window.location.href = 'intro2.html';
          });
          }
+
+         document.getElementById('mu').addEventListener('click', function() {
+        var audio = new Audio('/assets/mu.mp3');
+        audio.play().catch(e => console.error(e));
+        });
     
         </script>
 

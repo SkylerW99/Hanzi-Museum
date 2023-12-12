@@ -9,14 +9,16 @@
   </head>
   <body>
     <main class="fade">
-      <p>Now it's time to assemble your Hanzi on the grid, and please click the orange button when you finish. (need to
-        update)
-      </p>
+      <div class="page-container">
+        <h2 id = 'center-paragraph'>Now it's time to assemble your Hanzi on the grid, and please click the orange button when you finish.
+        </h2>
+
+      <img src="assets/instruction.gif" id="loading_animation" alt="now assemble hanzi on the grid">
 
       <!-- Add more content here -->
       <button type= "button" id= "toWaiting" class = 'buttonOrange'> Finish </button>
       <button type= "button" id= "tointro4" class = 'buttons2'> </button>
-
+      </div>
     </main>
     
       <script>
@@ -32,6 +34,13 @@
         if (toWaiting){
         toWaiting.addEventListener('click', function() {
         window.location.href = 'waiting.html';
+       }
+       )}
+
+       const tointro4 = document.getElementById('tointro4');
+        if (tointro4){
+        tointro4.addEventListener('click', function() {
+        window.location.href = 'intro4.html';
        }
        )}
 

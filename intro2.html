@@ -52,6 +52,10 @@
             window.location.href = 'intro3.html';
         })
         
+        document.getElementById('kou').addEventListener('click', function() {
+        var audio = new Audio('/assets/kou.mp3');
+        audio.play().catch(e => console.error(e));
+        });
     
         </script>
 

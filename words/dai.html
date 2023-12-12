@@ -40,6 +40,12 @@
             window.location.href = '../detection.html';
         })
 
+
+        document.getElementById('dai').addEventListener('click', function() {
+        var audio = new Audio('/assets/dai.mp3');
+        audio.play().catch(e => console.error(e));
+        });
+
         </script>
 
 </body>
