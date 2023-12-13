@@ -49,13 +49,11 @@ h1{
   line-height: 1.2;
 }
 
-h2{
-text-align: center;
 
-}
 
 p{
-  font-size:1vw;
+  font-size:1.2vw;
+  text-align: center;
 }
 
 label{
@@ -213,13 +211,14 @@ button:hover {
 
 .page-title{
   padding-top: 6%;
+  text-align: center;
 
 }
 
 .content {
   padding-top:2%;
   display: flex;
-  justify-content: space-between;
+  justify-content:center;
   align-items: flex-start;
   flex-wrap: wrap;
   width:100%;
@@ -227,8 +226,8 @@ button:hover {
 
 .capturedImg {
   flex: 1;
-  max-width: 40%; 
-  max-height:40%;
+  max-width: 30%; 
+  max-height:30%;
   margin-right: 10vw;
 }
 
@@ -241,7 +240,7 @@ button:hover {
 .form-container {
   flex: 1;
   max-width: 100%; 
-  max-height: 40%;
+  max-height: 30%;
 
 }
 
@@ -250,7 +249,7 @@ button:hover {
 }
 
 .input-group input{
-  height:10vh;
+  height:5vh;
   border:none;
 }
 
@@ -260,7 +259,7 @@ button:hover {
 }
 
 .input-group textarea {
-  height: 30vh; 
+  height: 25vh; 
   border:none;
 }
 
@@ -271,7 +270,7 @@ button:hover {
 .slideshow-container {
   max-width: 80%;
   position: relative;
-  margin-top: 10vh;
+  margin-top: 2vh;
   margin-left: auto;
   margin-right: auto;
 }
@@ -371,7 +370,7 @@ button:hover {
 
 #progress_bar{
   /* Size of the GIF */
-  width: 15vw; /* or any size you prefer */
+  width: 25vw; /* or any size you prefer */
   height: auto; /* maintains aspect ratio */
 
   position: fixed; 
@@ -387,5 +386,109 @@ button:hover {
   left: 50%; 
   transform: translate(-50%, -50%); 
 }
+
+#mu{
+  background-color: #d2b48c; 
+  border: none;
+  border-radius: 4vw; 
+  padding: 1vw 2vw; 
+  font-family: Arial, sans-serif;
+  font-size: 2vw; 
+  color: black; 
+  cursor: pointer; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top:48%;
+  left:34%;
+
+}
+
+#kou{
+  background-color: #d2b48c; 
+  border: none;
+  border-radius: 4vw; 
+  padding: 1vw 2vw; 
+  font-family: Arial, sans-serif;
+  font-size: 2vw; 
+  color: black; 
+  cursor: pointer; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top:48%;
+  left:70%;
+
+}
+
+
+/* The actual popup */
+.popup {
+  position: fixed;
+  top: 70%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.popup .popuptext {
+  visibility: hidden;
+  width: 60vw;
+  height: 34vw;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -90%);
+  background-image: url('assets/popup.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 6px;
+}
+
+.popup .popuptext2 {
+  visibility: hidden;
+  width: 60vw;
+  height: 34vw;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -90%);
+  background-image: url('assets/popup2.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 6px;
+}
+
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+#popup2{
+  top: 78%;  
+}
+
 
 

@@ -13,7 +13,15 @@
         <div class="image-container">
             <img src ='assets/welcome-page.png' alt = 'welcome to Hanzi Museum image'>
         </div>
-        <button id="toIntro" class = 'buttons'></button>
+        <button id="mu" class = 'audio-button'>mù
+            <span class="speaker-icon">🔊</span>
+        </button>
+
+        <button id="kou" class = 'audio-button'> kǒu
+            <span class="speaker-icon">🔊</span>
+        </button>
+
+        <button id="toDetection" class = 'buttons'></button>
 
     </div>
         
@@ -26,19 +34,28 @@
     <script>
     document.addEventListener('keydown', function(event) {
     if (event.key === 'Enter' || event.key === 'ArrowRight') {
-    window.location.href = 'intro.html'; // Change to your next page URL
+    window.location.href = 'detection.html'; // Change to your next page URL
     }
     });
 
-    const toIntro = document.getElementById('toIntro');
+    const toIntro = document.getElementById('toDetection');
     if (toIntro){
         toIntro.addEventListener('click', function() {
-        window.location.href = 'intro.html';
+        window.location.href = 'detection.html';
+    });
+    }
+
+    document.getElementById('mu').addEventListener('click', function() {
+    var audio = new Audio('/assets/mu.mp3');
+    audio.play().catch(e => console.error(e));
     });
 
-    }
+    document.getElementById('kou').addEventListener('click', function() {
+    var audio = new Audio('/assets/kou.mp3');
+    audio.play().catch(e => console.error(e));
+    });
 
     </script>
 
 </body>
-</html>
+</html>s

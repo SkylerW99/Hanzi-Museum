@@ -12,20 +12,23 @@
       <div class="page-container">
         <h2 id = 'center-paragraph'>Now it's time to assemble your Hanzi on the grid, and please click the orange button when you finish.
         </h2>
-
-      <img src="assets/instruction.gif" id="loading_animation" alt="now assemble hanzi on the grid">
-
-      <!-- Add more content here -->
+        <img src="assets/instruction.gif" id="loading_animation" alt="now assemble hanzi on the grid">
       <button type= "button" id= "toWaiting" class = 'buttonOrange'> Finish </button>
       <button type= "button" id= "tointro4" class = 'buttons2'> </button>
       </div>
+
+      <div class="popup" onclick="myFunction()">
+        <p>Need some hints?</p>
+        <div class="popuptext" id="myPopup"></div>
+      </div>
+
     </main>
     
       <script>
         document.addEventListener('keydown', function(event) {
 
         if(event.key === 'ArrowLeft'){
-            window.location.href = 'intro4.html';
+            window.location.href = 'index.html';
         }
 
         });
@@ -40,11 +43,14 @@
        const tointro4 = document.getElementById('tointro4');
         if (tointro4){
         tointro4.addEventListener('click', function() {
-        window.location.href = 'intro4.html';
+        window.location.href = 'index.html';
        }
        )}
 
-        
+       function myFunction() {
+      var popup = document.getElementById("myPopup");
+      popup.classList.toggle("show");
+      }
     
         </script>
 

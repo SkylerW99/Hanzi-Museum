@@ -30,6 +30,11 @@
             <span class="dot" onclick="currentSlide(3)"></span>
           </div>
 
+          <div class="popup" id="popup2" onclick="myFunction()">
+            <p>Want to explore some existed combos?</p>
+            <div class="popuptext2" id="myPopup"></div>
+          </div>
+
           <button id="startOver" class = 'buttonOrange'>Finish</button>
           <button id="toDetection" class='buttonBlue'>Play Again</button>
 
@@ -42,6 +47,13 @@
     </footer>
     
     <!-- Add JavaScript Files -->
+    <script>
+      function myFunction() {
+      var popup = document.getElementById("myPopup");
+      popup.classList.toggle("show");
+      }
+
+    </script>
 
 </body>
 </html>
