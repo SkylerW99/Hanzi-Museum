@@ -1,4 +1,8 @@
+    /* old model
     const URL = "https://teachablemachine.withgoogle.com/models/0bDNiGv6F/";
+    */
+
+    const URL ='https://teachablemachine.withgoogle.com/models/6GlMsXJls/';
 
     let model, webcam, labelContainer, maxPredictions;
 
