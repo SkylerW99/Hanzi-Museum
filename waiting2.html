@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="style.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main>
+        <div class="formpage-container">
+       <img src="assets/loading_animation.gif" id="loading_animation" alt="loading">
+       <img src="assets/waiting.gif" id="progress_bar" alt ="progress bar">
+       </div>
+
+
+        <canvas id="canvas" width="200" height="200" style="display:none;"></canvas>
+        <div id="webcam-container"></div>
+        <div id="result"></div>
+        
+    </main>
+    
+    <footer>
+      
+    </footer>
+
+</body>
+</html>

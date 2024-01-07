@@ -4,24 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome Page</title>
+    <!--import font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Rozha+One&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="style.css"> 
     <script src="script.js" defer></script>
 </head>
-<body>
+<body class="welcome-page">
     <main class='fade'>
     <div class = "page-container"> 
-        <div class="image-container">
-            <img src ='assets/welcome-page.png' alt = 'welcome to Hanzi Museum image'>
-        </div>
-        <button id="mu" class = 'audio-button'>mù
+
+        <h1 class="welcomeTitle">Welcome to Museum of Remaking Hanzi!</h1>
+        <p class ='welcomeTitle p'>Chinese Hanzi has a huge writing system with 50,000 Hanzi characters, with 10+ different structures that dates back to 3000 years ago. It is one of the most difficult languages to master! But 
+            dont run away yet, we will make Hanzi super fun for you! Here you would learn about different structures in Hanzi, their pronunciations and the culture behind through a series of hands-on interactive experiments! 
+        </p>
+
+        <button type= "button" id= "nextButton" class = 'button orange start'> Start </button>
+
+
+
+        <!--
+        <button id="mu2" class = 'audio-button'>mù
             <span class="speaker-icon">🔊</span>
         </button>
 
-        <button id="kou" class = 'audio-button'> kǒu
+        <button id="kou2" class = 'audio-button'> kǒu
             <span class="speaker-icon">🔊</span>
         </button>
 
         <button id="toDetection" class = 'buttons'></button>
+          -->
 
     </div>
         
@@ -34,28 +49,30 @@
     <script>
     document.addEventListener('keydown', function(event) {
     if (event.key === 'Enter' || event.key === 'ArrowRight') {
-    window.location.href = 'detection.html'; // Change to your next page URL
+    window.location.href = 'introMu.html'; // Change to your next page URL
     }
     });
 
-    const toIntro = document.getElementById('toDetection');
-    if (toIntro){
-        toIntro.addEventListener('click', function() {
-        window.location.href = 'detection.html';
+    const toIntroMu = document.getElementById('tointroMu');
+    if (toIntroMu){
+        toIntroMu.addEventListener('click', function() {
+        window.location.href = 'introMu.html';
     });
     }
 
-    document.getElementById('mu').addEventListener('click', function() {
+    /*
+    document.getElementById('mu2').addEventListener('click', function() {
     var audio = new Audio('/assets/mu.mp3');
     audio.play().catch(e => console.error(e));
     });
 
-    document.getElementById('kou').addEventListener('click', function() {
+    document.getElementById('kou2').addEventListener('click', function() {
     var audio = new Audio('/assets/kou.mp3');
     audio.play().catch(e => console.error(e));
     });
+    */
 
     </script>
 
 </body>
-</html>s
+</html>

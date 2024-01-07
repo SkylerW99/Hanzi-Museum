@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try Again</title>
+    <!--import font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Rozha+One&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css"> 
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class='fade'>
+    <div class = "page-container"> 
+    <p class="fullWidth">So close! Please try Again. Remember to choose the right building block!</p>
+
+    <!--set up webcam-->
+    <video id="webcam" autoplay playsinline style="display:none"></video>
+    <canvas id="canvas" class="center"></canvas>
+    <img src = 'assets/overlay.png' class = 'center overlay' alt = overlay>
+
+    <button type= "button" id= "toWaiting1" class = 'button orange'>Finish</button>
+    <button type= "button" id= "toIntroKou" class = 'arrowButtons black'></button>
+
+    </div>
+        
+    </main>
+    
+    <footer>
+      
+    </footer>
+
+    <script>
+    document.getElementById('toWaiting1').addEventListener('click', function() {
+    window.location.href = 'waiting1.html';
+    });
+
+    document.addEventListener('keydown', ()=>{
+    if(event.key === 'ArrowLeft'){
+        window.location.href='introKou.html';
+    }
+    })
+    </script>
+
+</body>
+</html>

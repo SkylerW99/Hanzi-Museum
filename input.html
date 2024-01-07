@@ -8,50 +8,44 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <main>
-
-
-
-
-
-
-    <div class="formpage-container">
-        <h1 class ='page-title'>It’s not a existed Hanzi...</h1>
-        <p>But now you get the chance to define it. Your definition will be added to our digital archive and shared with other audiences. 
-            And you’ll be able to see what others' made later.</p>
-        <div class="content">
+    <main class="fade">
+     <div class = "page-container"> 
+    <div class="container-xxbig">
+        <div class="container-small">
+        <h1>It's not an existed hanzi...</h1>
+        <p class="paragraphs">But now you get the chance to define your unique creation! Your definition will be added to our digital archive and shared with other audiences. 
+            And you’ll be able to see what others' made later.
+        </p>
+        </div>
+        
+        <div class="container-xbig">
             <div class = "capturedImg">
                 <img id = 'captured-image' alt = 'captured image'>
             </div>
 
-        <div class="form-container">
+        <div class='container-med'>
             <form id = 'form'>
+
+
                 <div class='input-group'>
-                <label for='user-name'>Your name:</label>
-                <input type='text' id='user-name' name="name" >
+                <label for='user-name'></label>
+                <input type='text' id='user-name' name="name" placeholder="enter your name (not the hanzi's name) here.">
                 </div>
     
                 <div class="input-group">
-                <label for = 'user-message'>Craft your Hanzi's story: what does it represent? </label>
-                <textarea id ='user-message' name="message" ></textarea>
+                <label for = 'user-message'> </label>
+                <textarea id ='user-message' name="message" placeholder="Craft your Hanzi's story: what does it represent?"></textarea>
                 </div>
-                <div class='button-group'>
-                <button type ='submit' id="submit" class = 'buttonOrange'>Submit</button>
-                </div>
-            </form>
 
-            <div>
-                <button id="toDetection" class = 'buttonBlue' >Play Again</button>
             </div>
-
-
         </div>
-
-
         </div>
-
     </div>
-        
+                <button type ='submit' id="submit" class = 'button orange'>Submit</button>
+               
+            </form>
+                <button id="toDetection" class = 'button grey' >Play Again</button>
+
         
     </main>
     

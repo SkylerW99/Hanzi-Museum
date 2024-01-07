@@ -3,51 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome Page</title>
+    <title>lv</title>
+    <!--import font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Rozha+One&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="../style.css"> 
     <script src="../script.js" defer></script>
 </head>
-<body>
-    <main>
+<body class="lv-bg">
+    <main class='fade'>
+    <div class = "page-container"> 
+        <div class="container-xxbig">
+        <h1>Great Job! You created...</h1>
 
-        <div class = "page-container"> 
-            <div class="image-container">
-                <img src ='/assets/lv.png' alt = 'you created "吕"'>
-            </div>
-            <button id="lv" class = 'audio-button'>lǚ
-                <span class="speaker-icon">🔊</span>
-            </button>
-            <button id="startOver" class = 'buttonOrange'>Finish</button>
-            <button id="toDetection" class='buttonBlue'>Play Again</button>
+        <div class="container-xbig">
+
+        <img src="/assets/rhythm.png" class="hanziImg" alt="wood 3D illustration that looks like a grove">
+
+        <div class="container-big">
+        
+        <div class="container-med">
+        <img src="/assets/lv-hanzi.png" class="gridImg" alt ='hanzi mu on the grid'>
+
+
+        <div class = 'container-small'>
+        <div class="heading">RHYTHM</div>
+        <button id="lvButton" class = 'audio-button'>lǚ
+            <img src="/assets/sound-icon.png" class="speaker-icon" alt="speaker-icon">
+        </button>
         </div>
+    </div>
+
+    <p class ='paragraphs'>
+        The shape of '吕'  is like two pieces of metal melted into chunks, 
+        which should be the word "aluminum (not aluminum of metal elements)"; 
+        Once said, it looks like two vertebrae, the original meaning is backbone. 
+        There are twelve rules in ancient Chinese music, six of which are called 
+        ‘rhythm’ and six of which are called ‘rhythm’.
+    </p>
 
 
+    </div>
+    </div>
+    </div>
 
+
+    <button id="toDetection" class = 'button orange'>Play Aagin</button>
+    <button id="startOver" class='button grey'>Finish</button>
+
+    </div>
+        
     </main>
     
     <footer>
-
+      
     </footer>
 
     <script>
-        const startOver = document.getElementById('startOver');
-        startOver.addEventListener('click',()=>{
-            window.location.href = '../index.html';
-        })
-
-        const toDetection = document.getElementById('toDetection');
-        toDetection.addEventListener('click',()=>{
-            window.location.href = '../detection.html';
-        })
+    
+    document.getElementById('lvButton').addEventListener('click', function() {
+    var audio = new Audio('/assets/lv.mp3');
+    audio.play().catch(e => console.error(e));
+    });
 
 
-        document.getElementById('lv').addEventListener('click', function() {
-        var audio = new Audio('/assets/lv.mp3');
-        audio.play().catch(e => console.error(e));
-        });
-
-        </script>
-
+    </script>
 
 </body>
 </html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <!--import font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Rozha+One&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css"> 
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class='fade'>
+    <div class = "page-container"> 
+    <p class="fullWidth">You now what? “木” and “口” are not only single characters, but can be the subcomponents of other characters too.
+        Try to follow the guide and put the corresponding building blocks on the grid. Click “finish” when you are done.</p>
+
+    <!--set up webcam-->
+    <video id="webcam" autoplay playsinline style="display:none"></video>
+    <canvas id="canvas" class="center"></canvas>
+    <img src = 'assets/overlay.png' class = 'center overlay' alt = overlay>
+
+    <button type= "button" id= "nextButton" class = 'button orange'>Finish</button>
+    <button type= "button" id= "backButton" class = 'arrowButtons black'></button>
+
+    </div>
+        
+    </main>
+    
+    <footer>
+      
+    </footer>
+
+</body>
+</html>

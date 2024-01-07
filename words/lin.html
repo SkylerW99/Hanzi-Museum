@@ -3,52 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome Page</title>
+    <title>lin</title>
+    <!--import font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Rozha+One&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="../style.css"> 
     <script src="../script.js" defer></script>
 </head>
-<body>
-    <main>
+<body class="lin-bg">
+    <main class='fade'>
+    <div class = "page-container"> 
+        <div class="container-xxbig">
+        <h1>Great Job! You created...</h1>
 
-        <div class = "page-container"> 
-            <div class="image-container">
-                <img src ='/assets/lin.png' alt = 'you created "林"'>
-            </div>
-            <button id="lin" class = 'audio-button'>lín
-                <span class="speaker-icon">🔊</span>
-            </button>
-            <button id="startOver" class = 'buttonOrange'>Finish</button>
-            <button id="toDetection" class='buttonBlue'>Play Again</button>
+        <div class="container-xbig">
+
+        <img src="/assets/grove.png" class="hanziImg" alt="wood 3D illustration that looks like a grove">
+
+        <div class="container-big">
+        
+        <div class="container-med">
+        <img src="/assets/lin-hanzi.png" class="gridImg" alt ='hanzi mu on the grid'>
+
+
+        <div class = 'container-small'>
+        <div class="heading">GROVE</div>
+        <button id="linButton" class = 'audio-button'>lín
+            <img src="/assets/sound-icon.png" class="speaker-icon" alt="speaker-icon">
+        </button>
         </div>
+    </div>
+
+    <p class ='paragraphs'>
+        '林' represents a grove. It beautifully illustrates the concept of duplication in Chinese characters: 
+        '林' is composed of two '木' (wood) characters side by side, symbolizing a collection of trees. '林' not 
+        only conveys the idea of a forest but also forms part of other words and expressions related to nature 
+        and environments, such as '森林' (dense forest, combining '森' and '林'). Writing '林' is an exercise in 
+        symmetry and balance, reflecting the harmony found in nature. Each stroke is a part of the greater whole, 
+        just like each tree in a forest.
+    </p>
 
 
+    </div>
+    </div>
+    </div>
 
+
+    <button id="toDetection" class = 'button orange'>Play Aagin</button>
+    <button id="startOver" class='button grey'>Finish</button>
+
+    </div>
+        
     </main>
-
-
     
     <footer>
+      
     </footer>
 
     <script>
-        const startOver = document.getElementById('startOver');
-        startOver.addEventListener('click',()=>{
-            window.location.href = '../index.html';
-        })
-
-        const toDetection = document.getElementById('toDetection');
-        toDetection.addEventListener('click',()=>{
-            window.location.href = '../detection.html';
-        })
+    
+    document.getElementById('linButton').addEventListener('click', function() {
+    var audio = new Audio('/assets/lin.mp3');
+    audio.play().catch(e => console.error(e));
+    });
 
 
-        document.getElementById('lin').addEventListener('click', function() {
-        var audio = new Audio('/assets/lin.mp3');
-        audio.play().catch(e => console.error(e));
-        });
-
-        </script>
-
+    </script>
 
 </body>
 </html>

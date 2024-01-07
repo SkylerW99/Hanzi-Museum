@@ -3,50 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome Page</title>
+    <title>xing</title>
+    <!--import font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Rozha+One&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="../style.css"> 
     <script src="../script.js" defer></script>
 </head>
-<body>
-    <main>
+<body class="xing-bg">
+    <main class='fade'>
+    <div class = "page-container"> 
+        <div class="container-xxbig">
+        <h1>Great Job! You created...</h1>
 
-        <div class = "page-container"> 
-            <div class="image-container">
-                <img src ='/assets/xing.png' alt = 'you created "杏"'>
-            </div>
-            <button id="xing" class = 'audio-button'>xìng
-                <span class="speaker-icon">🔊</span>
-            </button>
-            <button id="startOver" class = 'buttonOrange'>Finish</button>
-            <button id="toDetection" class='buttonBlue'>Play Again</button>
+        <div class="container-xbig">
+
+        <img src="/assets/apricot.png" class="hanziImg" alt="wood 3D illustration that looks like a forest">
+
+        <div class="container-big">
+        
+        <div class="container-med">
+        <img src="/assets/xing-hanzi.png" class="gridImg" alt ='hanzi mu on the grid'>
+
+
+        <div class = 'container-small'>
+        <div class="heading">APRICOT</div>
+        <button id="xingButton" class = 'audio-button'>xìng
+            <img src="/assets/sound-icon.png" class="speaker-icon" alt="speaker-icon">
+        </button>
         </div>
+    </div>
+
+    <p class ='paragraphs'>
+        '杏'  represents an 'apricot.' The upper part of '杏' suggests the branches of an apricot tree, 
+        symbolizing growth and connection. The lower part resembles the fruit itself, indicating the 
+        specific object the character represents. This combination of elements helps convey not just the 
+        idea of an apricot, but also its origin and connection to the tree. It's a beautiful way of 
+        encapsulating both the physical aspect of the apricot and its natural source in a single character.
+    </p>
 
 
+    </div>
+    </div>
+    </div>
 
+
+    <button id="toDetection" class = 'button orange'>Play Aagin</button>
+    <button id="startOver" class='button grey'>Finish</button>
+
+    </div>
+        
     </main>
     
     <footer>
+      
     </footer>
 
     <script>
-        const startOver = document.getElementById('startOver');
-        startOver.addEventListener('click',()=>{
-            window.location.href = '../index.html';
-        })
-
-        const toDetection = document.getElementById('toDetection');
-        toDetection.addEventListener('click',()=>{
-            window.location.href = '../detection.html';
-        })
+    
+    document.getElementById('xingButton').addEventListener('click', function() {
+    var audio = new Audio('/assets/xing.mp3');
+    audio.play().catch(e => console.error(e));
+    });
 
 
-        document.getElementById('xing').addEventListener('click', function() {
-        var audio = new Audio('/assets/xing.mp3');
-        audio.play().catch(e => console.error(e));
-        });
-
-        </script>
-
+    </script>
 
 </body>
 </html>

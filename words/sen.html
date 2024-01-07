@@ -3,50 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome Page</title>
+    <title>sen</title>
+    <!--import font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Rozha+One&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="../style.css"> 
     <script src="../script.js" defer></script>
 </head>
-<body>
-    <main>
+<body class="sen-bg">
+    <main class='fade'>
+    <div class = "page-container"> 
+        <div class="container-xxbig">
+        <h1>Great Job! You created...</h1>
 
-        <div class = "page-container"> 
-            <div class="image-container">
-                <img src ='/assets/sen.png' alt = 'you created "森"'>
-            </div>
-            <button id="sen" class = 'audio-button'>sēn
-                <span class="speaker-icon">🔊</span>
-            </button>
-            <button id="startOver" class = 'buttonOrange'>Finish</button>
-            <button id="toDetection" class='buttonBlue'>Play Again</button>
+        <div class="container-xbig">
+
+        <img src="/assets/forest.png" class="hanziImg" alt="wood 3D illustration that looks like a forest">
+
+        <div class="container-big">
+        
+        <div class="container-med">
+        <img src="/assets/sen-hanzi.png" class="gridImg" alt ='hanzi mu on the grid'>
+
+
+        <div class = 'container-small'>
+        <div class="heading">FOREST</div>
+        <button id="senButton" class = 'audio-button'>sēn
+            <img src="/assets/sound-icon.png" class="speaker-icon" alt="speaker-icon">
+        </button>
         </div>
+    </div>
+
+    <p class ='paragraphs'>
+        The meaning of "森" is related to forests or densely wooded areas. 
+        In Chinese, "森" is an ideogram, and both its shape and meaning are related to trees. 
+        The character is formed by three "木" (mù, meaning tree) characters, making it a type of 
+        ideographic compound character in Chinese, where multiple similar elements are combined to 
+        convey a concept.
+    </p>
 
 
+    </div>
+    </div>
+    </div>
 
+
+    <button id="toDetection" class = 'button orange'>Play Aagin</button>
+    <button id="startOver" class='button grey'>Finish</button>
+
+    </div>
+        
     </main>
     
     <footer>
+      
     </footer>
 
     <script>
-        const startOver = document.getElementById('startOver');
-        startOver.addEventListener('click',()=>{
-            window.location.href = '../index.html';
-        })
-
-        const toDetection = document.getElementById('toDetection');
-        toDetection.addEventListener('click',()=>{
-            window.location.href = '../detection.html';
-        })
+    
+    document.getElementById('senButton').addEventListener('click', function() {
+    var audio = new Audio('/assets/sen.mp3');
+    audio.play().catch(e => console.error(e));
+    });
 
 
-        document.getElementById('sen').addEventListener('click', function() {
-        var audio = new Audio('/assets/sen.mp3');
-        audio.play().catch(e => console.error(e));
-        });
-
-        </script>
-
+    </script>
 
 </body>
 </html>

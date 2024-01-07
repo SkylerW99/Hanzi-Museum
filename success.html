@@ -3,53 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dai</title>
+    <title>Onboarding</title>
     <!--import font-->
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Rozha+One&display=swap" rel="stylesheet">
 
 
-    <link rel="stylesheet" href="../style.css"> 
-    <script src="../script.js" defer></script>
+    <link rel="stylesheet" href="style.css"> 
+    <script src="script.js" defer></script>
 </head>
-<body class="dai-bg">
+<body>
     <main class='fade'>
     <div class = "page-container"> 
-        <div class="container-xxbig">
-        <h1>Great Job! You created...</h1>
 
+        <div class="container-xxbig">
+            <h1>Congrats! You created your first Hanzi!</h1>
         <div class="container-xbig">
 
-        <img src="/assets/dull.png" class="hanziImg" alt="wood 3D illustration that looks like a tree">
+        <img src="assets/dull.png" class="hanziImg" alt="a dull person">
 
         <div class="container-big">
         
         <div class="container-med">
-        <img src="/assets/dai-hanzi.png" class="gridImg" alt ='hanzi mu on the grid'>
+        <img src="assets/dai-hanzi.png" class="gridImg" alt ='hanzi dai on the grid'>
 
 
         <div class = 'container-small'>
-        <div class="heading">DULL</div>
+        <div class="heading">Dull</div>
         <button id="daiButton" class = 'audio-button'>dāi
             <img src="/assets/sound-icon.png" class="speaker-icon" alt="speaker-icon">
         </button>
         </div>
     </div>
 
-    <p class ='paragraphs'>The Chinese character '呆' primarily conveys the meaning of being 'dull,' 'stupid,' or 'sluggish.'  
-        It can be used to describe someone who is slow to understand or react, or someone who appears to be in a state of mental inactivity or dullness.  
-        In some contexts, it may also imply naivety or simplicity in a person's behavior or thinking.
+    <p class ='paragraphs'>Isn’t it interesting that “呆” look like a woody person sitting on the tree? 
+        <br>
+        <br>
+        Also, as you might noticed, the grid that the hanzi sit on is crucial for Chinese writing system! 
+        It holds Hanzi in different kinds of structures. For example, “呆” is top-bottom structure, where the 
+        “口” (mouth) sits on the top half of grid, and the “木” (wood) sits at the bottom half!
     </p>
 
-
     </div>
     </div>
     </div>
 
 
-    <button id="toDetection" class = 'button orange'>Play Aagin</button>
-    <button id="startOver" class='button grey'>Finish</button>
+    <button type= "button" id= "nextButton" class = 'arrowButtons orange'></button>
+    <button type= "button" id= "backButton" class = 'arrowButtons black'></button>
 
     </div>
         
@@ -60,12 +62,13 @@
     </footer>
 
     <script>
+
     
     document.getElementById('daiButton').addEventListener('click', function() {
     var audio = new Audio('/assets/dai.mp3');
     audio.play().catch(e => console.error(e));
     });
-
+    
 
     </script>
 

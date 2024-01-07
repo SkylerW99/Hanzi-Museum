@@ -3,30 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kou</title>
+    <title>Onboarding</title>
     <!--import font-->
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Rozha+One&display=swap" rel="stylesheet">
 
 
-    <link rel="stylesheet" href="../style.css"> 
-    <script src="../script.js" defer></script>
+    <link rel="stylesheet" href="style.css"> 
+    <script src="script.js" defer></script>
 </head>
 <body class="kou-bg">
     <main class='fade'>
     <div class = "page-container"> 
-        <div class="container-xxbig">
-        <h1>Nice! You created "mouth" again!</h1>
 
+        <div class="container-xxbig">
+            <p class="paragraphs">Let's start by learning some basic Hanzi...</p>
         <div class="container-xbig">
 
-        <img src="/assets/mouth.png" class="hanziImg" alt="wood 3D illustration that looks like a tree">
+        <img src="assets/mouth.png" class="hanziImg" alt="wood 3D illustration that looks like a tree">
 
         <div class="container-big">
         
         <div class="container-med">
-        <img src="/assets/kou-hanzi.png" class="gridImg" alt ='hanzi mu on the grid'>
+        <img src="assets/kou-hanzi.png" class="gridImg" alt ='hanzi mu on the grid'>
 
 
         <div class = 'container-small'>
@@ -37,19 +37,18 @@
         </div>
     </div>
 
-    <p class ='paragraphs'>
-        '口' originated in ancient China, where it was pictographically represented as an open mouth. This journey through time reveals how '口' has retained its form and significance. 
-        In modern Chinese, '口' symbolizes a mouth, reflecting its role in speech and taste.  
+    <p class ='paragraphs'>'口' originated in ancient China, where it was pictographically represented as an open mouth. 
+        This journey through time reveals how '口' has retained its form and significance. In modern Chinese, '口' symbolizes 
+        a mouth, reflecting its role in speech and taste. 
     </p>
 
-
     </div>
     </div>
     </div>
 
 
-    <button id="toDetection" class = 'button orange'>Play Aagin</button>
-    <button id="startOver" class='button grey'>Finish</button>
+    <button type= "button" id= "nextButton" class = 'arrowButtons orange'></button>
+    <button type= "button" id= "backButton" class = 'arrowButtons black'></button>
 
     </div>
         
@@ -60,12 +59,13 @@
     </footer>
 
     <script>
+
     
     document.getElementById('kouButton').addEventListener('click', function() {
     var audio = new Audio('/assets/kou.mp3');
     audio.play().catch(e => console.error(e));
     });
-
+    
 
     </script>
 

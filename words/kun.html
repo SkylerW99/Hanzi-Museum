@@ -3,26 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome Page</title>
+    <title>kun</title>
+    <!--import font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Rozha+One&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="../style.css"> 
     <script src="../script.js" defer></script>
 </head>
-<body>
-    <main>
+<body class="kun-bg">
+    <main class='fade'>
+    <div class = "page-container"> 
+        <div class="container-xxbig">
+        <h1>Great Job! You created...</h1>
 
-        <div class = "page-container"> 
-            <div class="image-container">
-                <img src ='/assets/kun.png' alt = 'you created "困"'>
-            </div>
-            <button id="kun" class = 'audio-button'>kùn
-                <span class="speaker-icon">🔊</span>
-            </button>
-            <button id="startOver" class = 'buttonOrange'>Finish</button>
-            <button id="toDetection" class='buttonBlue'>Play Again</button>
+        <div class="container-xbig">
+
+        <img src="/assets/restricted.png" class="hanziImg" alt="wood 3D illustration that looks like a tree">
+
+        <div class="container-big">
+        
+        <div class="container-med">
+        <img src="/assets/kun-hanzi.png" class="gridImg" alt ='hanzi mu on the grid'>
+
+
+        <div class = 'container-small'>
+        <div class="heading">Restricted</div>
+        <button id="kunButton" class = 'audio-button'>kùn
+            <img src="/assets/sound-icon.png" class="speaker-icon" alt="speaker-icon">
+        </button>
         </div>
+    </div>
+
+    <p class ='paragraphs'>
+        '困's meaning is derived from oracle bone inscriptions, meaning abandoned houses.
+         The "口" here is like a top view of the house, while the "木" represents a house that is 
+         overgrown with weeds and trees due to a long time of neglect. From "abandoned houses" evolved 
+         some meaning: to be stuck in a difficult, painful or irretrievable situation. They all mean restricted.
+    </p>
 
 
+    </div>
+    </div>
+    </div>
 
+
+    <button id="toDetection" class = 'button orange'>Play Aagin</button>
+    <button id="startOver" class='button grey'>Finish</button>
+
+    </div>
+        
     </main>
     
     <footer>
@@ -30,24 +62,14 @@
     </footer>
 
     <script>
-        const startOver = document.getElementById('startOver');
-        startOver.addEventListener('click',()=>{
-            window.location.href = '../index.html';
-        })
-
-        const toDetection = document.getElementById('toDetection');
-        toDetection.addEventListener('click',()=>{
-            window.location.href = '../detection.html';
-        })
+    
+    document.getElementById('kunButton').addEventListener('click', function() {
+    var audio = new Audio('/assets/kun.mp3');
+    audio.play().catch(e => console.error(e));
+    });
 
 
-        document.getElementById('kun').addEventListener('click', function() {
-        var audio = new Audio('/assets/kun.mp3');
-        audio.play().catch(e => console.error(e));
-        });
-
-        </script>
-
+    </script>
 
 </body>
 </html>

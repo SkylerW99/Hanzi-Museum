@@ -9,9 +9,12 @@
 </head>
 <body>
     <main class="fade">
-    <div class="formpage-container">
-        <h1 class ='page-title'>Thanks for submitting your creation!</h1>
-        <p>Other visitors created the new Hanzi like yours, check out their works.</p>
+    <div class ="container-xxbig new">
+    <div class="container-small slider">
+        <h1>Thanks for submitting your creation!</h1>
+        <p class="paragraphs">Check out some similar creations from other visitors!</p>
+      </div>
+      <div class="slider">
            <div class="slideshow-container">
 
             <!-- Full-width images with number and caption text -->
@@ -30,15 +33,17 @@
             <span class="dot" onclick="currentSlide(3)"></span>
           </div>
 
-          <div class="popup" id="popup2" onclick="myFunction()">
-            <p>Want to explore some existed combos?</p>
+          <div class="popup" onclick="myFunction()">
+            <p>Want to get more hints for the next round?</p>
             <div class="popuptext2" id="myPopup"></div>
           </div>
+          <div id="popup-overlay"></div>
 
-          <button id="startOver" class = 'buttonOrange'>Finish</button>
-          <button id="toDetection" class='buttonBlue'>Play Again</button>
+        </div>
+      </div>
 
-    </div>
+        <button id="toDetection" class = 'button orange'>Play Again</button>
+        <button id="startOver" class='button grey'>Finish</button>
     </main>
 
     
@@ -50,7 +55,16 @@
     <script>
       function myFunction() {
       var popup = document.getElementById("myPopup");
+      var overlay = document.getElementById('popup-overlay');
       popup.classList.toggle("show");
+
+      if (popup.classList.contains("show")) {
+        overlay.style.display = 'block'; 
+    } else {
+        overlay.style.display = 'none'; 
+    }
+
+
       }
 
     </script>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity</title>
+    <!--import font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Rozha+One&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css"> 
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class='fade'>
+    <div class = "page-container"> 
+
+        <div class="container-xxbig">
+            <p class="paragraphs">Now it’s time to try making some more hanzi by yourself on the grid. Click “finish” when you are done!</p>
+        <div class="container-xbig new">
+
+        <div class="container-big new">
+        
+        <div class="container-med new">
+        <div class="subhead">DON'T</div>
+        <div class = 'container-small new'>
+        <img src="assets/dont.png" class ='rules' alt ='rules of what not to do'>
+        <p class="paragraphs">Overlap the components / exceed the boundaries of the grid.</p>
+        </div>
+        </div>
+
+        <div class = 'dotted-line'></div>
+
+        <div class ='container-med new'>
+        <div class="subhead">DO</div>
+        <div class = 'container-small new'>
+            <img src="assets/do.png" class ='rules' alt ='rules of what to do'>
+            <p class="paragraphs">consider different types of structures.</p>
+        </div>
+        </div>
+
+    </div>
+    <video id="webcam" autoplay playsinline style="display:none"></video>
+    <canvas id="canvas"></canvas>
+    </div>
+
+    </div>
+
+
+    <button type= "button" id= "toWaiting2" class = 'button orange'>Finish</button>
+    <button type= "button" id= "backButton" class = 'arrowButtons black'></button>
+
+    </div>
+        
+    </main>
+    
+    <footer>
+      
+    </footer>
+
+    <script>
+
+    
+    document.getElementById('toWaiting2').addEventListener('click', function() {
+        window.location.href = 'waiting2.html';
+    });
+    
+
+    </script>
+
+</body>
+</html>

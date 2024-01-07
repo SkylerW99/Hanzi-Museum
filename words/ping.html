@@ -3,51 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome Page</title>
+    <title>pin</title>
+    <!--import font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Rozha+One&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="../style.css"> 
     <script src="../script.js" defer></script>
 </head>
-<body>
-    <main>
+<body class="ping-bg">
+    <main class='fade'>
+    <div class = "page-container"> 
+        <div class="container-xxbig">
+        <h1>Great Job! You created...</h1>
 
-        <div class = "page-container"> 
-            <div class="image-container">
-                <img src ='/assets/ping.png' alt = 'you created "品"'>
-            </div>
-            <button id="ping" class = 'audio-button'>pǐn
-                <span class="speaker-icon">🔊</span>
-            </button>
-            <button id="startOver" class = 'buttonOrange'>Finish</button>
-            <button id="toDetection" class='buttonBlue'>Play Again</button>
+        <div class="container-xbig">
+
+        <img src="/assets/taste.png" class="hanziImg" alt="wood 3D illustration that looks like a grove">
+
+        <div class="container-big">
+        
+        <div class="container-med">
+        <img src="/assets/pin-hanzi.png" class="gridImg" alt ='hanzi mu on the grid'>
+
+
+        <div class = 'container-small'>
+        <div class="heading">TASTE</div>
+        <button id="pinButton" class = 'audio-button'>pǐn
+            <img src="/assets/sound-icon.png" class="speaker-icon" alt="speaker-icon">
+        </button>
         </div>
+    </div>
+
+    <p class ='paragraphs'>
+        The Chinese character "品" (pronounced pǐn) is composed of three 口 (kǒu), 
+        which means "mouth." This character structure conveys the idea of multiple 
+        layers or aspects. In the context of "taste," 品 can refer to the quality, 
+        flavor, or grade of something, especially in terms of food or drink. It's 
+        about assessing and appreciating the subtle nuances and characteristics. 
+    </p>
 
 
+    </div>
+    </div>
+    </div>
 
+
+    <button id="toDetection" class = 'button orange'>Play Aagin</button>
+    <button id="startOver" class='button grey'>Finish</button>
+
+    </div>
+        
     </main>
     
     <footer>
-
+      
     </footer>
 
     <script>
-        const startOver = document.getElementById('startOver');
-        startOver.addEventListener('click',()=>{
-            window.location.href = '../index.html';
-        })
-
-        const toDetection = document.getElementById('toDetection');
-        toDetection.addEventListener('click',()=>{
-            window.location.href = '../detection.html';
-        })
+    
+    document.getElementById('pinButton').addEventListener('click', function() {
+    var audio = new Audio('/assets/ping.mp3');
+    audio.play().catch(e => console.error(e));
+    });
 
 
-        document.getElementById('ping').addEventListener('click', function() {
-        var audio = new Audio('/assets/ping.mp3');
-        audio.play().catch(e => console.error(e));
-        });
-
-        </script>
-
+    </script>
 
 </body>
 </html>
