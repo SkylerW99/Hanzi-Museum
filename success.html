@@ -32,7 +32,7 @@
         <div class = 'container-small'>
         <div class="heading">Dull</div>
         <button id="daiButton" class = 'audio-button'>dāi
-            <img src="/assets/sound-icon.png" class="speaker-icon" alt="speaker-icon">
+            <img src="assets/sound-icon.png" class="speaker-icon" alt="speaker-icon">
         </button>
         </div>
     </div>
@@ -65,7 +65,7 @@
 
     
     document.getElementById('daiButton').addEventListener('click', function() {
-    var audio = new Audio('/assets/dai.mp3');
+    var audio = new Audio('assets/dai.mp3');
     audio.play().catch(e => console.error(e));
     });
     

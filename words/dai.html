@@ -21,18 +21,18 @@
 
         <div class="container-xbig">
 
-        <img src="/assets/dull.png" class="hanziImg" alt="wood 3D illustration that looks like a tree">
+        <img src="../assets/dull.png" class="hanziImg" alt="wood 3D illustration that looks like a tree">
 
         <div class="container-big">
         
         <div class="container-med">
-        <img src="/assets/dai-hanzi.png" class="gridImg" alt ='hanzi mu on the grid'>
+        <img src="../assets/dai-hanzi.png" class="gridImg" alt ='hanzi mu on the grid'>
 
 
         <div class = 'container-small'>
         <div class="heading">DULL</div>
         <button id="daiButton" class = 'audio-button'>dāi
-            <img src="/assets/sound-icon.png" class="speaker-icon" alt="speaker-icon">
+            <img src="../assets/sound-icon.png" class="speaker-icon" alt="speaker-icon">
         </button>
         </div>
     </div>
@@ -62,7 +62,7 @@
     <script>
     
     document.getElementById('daiButton').addEventListener('click', function() {
-    var audio = new Audio('/assets/dai.mp3');
+    var audio = new Audio('../assets/dai.mp3');
     audio.play().catch(e => console.error(e));
     });
 
