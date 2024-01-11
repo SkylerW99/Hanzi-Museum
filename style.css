@@ -320,7 +320,7 @@ button:hover {
   box-shadow: 4 4px #999;
 
   position: absolute;
-  z-index:100;
+  z-index:9;
 }
 
 .button.orange{
@@ -337,7 +337,7 @@ button:hover {
 
 .button.orange.start{
   bottom: 26vh;
-  right:50vh;
+  right:24vw;
 }
 
 
@@ -539,7 +539,7 @@ button:hover {
 /* The actual popup */
 .popup {
   position: fixed;
-  top: 75%; 
+  top: 80%; 
   left: 50%; 
   transform: translate(-50%, -50%);
   cursor: pointer;
