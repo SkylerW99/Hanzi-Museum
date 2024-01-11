@@ -21,18 +21,18 @@
 
         <div class="container-xbig">
 
-        <img src="/assets/grove.png" class="hanziImg" alt="wood 3D illustration that looks like a grove">
+        <img src="../assets/grove.png" class="hanziImg" alt="wood 3D illustration that looks like a grove">
 
         <div class="container-big">
         
         <div class="container-med">
-        <img src="/assets/lin-hanzi.png" class="gridImg" alt ='hanzi mu on the grid'>
+        <img src="../assets/lin-hanzi.png" class="gridImg" alt ='hanzi mu on the grid'>
 
 
         <div class = 'container-small'>
         <div class="heading">GROVE</div>
         <button id="linButton" class = 'audio-button'>lín
-            <img src="/assets/sound-icon.png" class="speaker-icon" alt="speaker-icon">
+            <img src="../assets/sound-icon.png" class="speaker-icon" alt="speaker-icon">
         </button>
         </div>
     </div>
@@ -66,7 +66,7 @@
     <script>
     
     document.getElementById('linButton').addEventListener('click', function() {
-    var audio = new Audio('assets/lin.mp3');
+    var audio = new Audio('../assets/lin.mp3');
     audio.play().catch(e => console.error(e));
     });
 

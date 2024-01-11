@@ -21,18 +21,18 @@
 
         <div class="container-xbig">
 
-        <img src="/assets/wood.png" class="hanziImg" alt="wood 3D illustration that looks like a grove">
+        <img src="../assets/wood.png" class="hanziImg" alt="wood 3D illustration that looks like a grove">
 
         <div class="container-big">
         
         <div class="container-med">
-        <img src="/assets/mu-hanzi.png" class="gridImg" alt ='hanzi mu on the grid'>
+        <img src="../assets/mu-hanzi.png" class="gridImg" alt ='hanzi mu on the grid'>
 
 
         <div class = 'container-small'>
         <div class="heading">WOOD</div>
         <button id="muButton" class = 'audio-button'>mù
-            <img src="/assets/sound-icon.png" class="speaker-icon" alt="speaker-icon">
+            <img src="../assets/sound-icon.png" class="speaker-icon" alt="speaker-icon">
         </button>
         </div>
     </div>
@@ -63,7 +63,7 @@
     <script>
     
     document.getElementById('muButton').addEventListener('click', function() {
-    var audio = new Audio('assets/mu.mp3');
+    var audio = new Audio('../assets/mu.mp3');
     audio.play().catch(e => console.error(e));
     });
 
