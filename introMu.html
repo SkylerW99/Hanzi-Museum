@@ -32,7 +32,7 @@
         <div class = 'container-small'>
         <div class="heading">WOOD</div>
         <button id="muButton" class = 'audio-button'>mù
-            <img src="/assets/sound-icon.png" class="speaker-icon" alt="speaker-icon">
+            <img src="assets/sound-icon.png" class="speaker-icon" alt="speaker-icon">
         </button>
         </div>
     </div>
@@ -61,7 +61,7 @@
     <script>
     
     document.getElementById('muButton').addEventListener('click', function() {
-    var audio = new Audio('/assets/mu.mp3');
+    var audio = new Audio('assets/mu.mp3');
     audio.play().catch(e => console.error(e));
     });
 

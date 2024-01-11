@@ -285,7 +285,8 @@ function createSlides(imageFilenames) {
         let slideDiv = document.createElement('div');
         slideDiv.className = 'mySlides fade';
         slideDiv.innerHTML = `<img src="assets/${filename}" style="width:100%">`;
-        container.appendChild(slideDiv);
+        if(slideDiv){
+        container.appendChild(slideDiv);}
     });
     /*
     <a class="prev" onclick="plusSlides(-1)">&#10094; Prev</a>
