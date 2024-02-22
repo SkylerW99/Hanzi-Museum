@@ -232,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Success', data);
             console.log('local storage set, navigating to next page');
             localStorage.setItem('formData',JSON.stringify(formData));
-            window.location.href = 'archive.html';
+            window.location.href = '../archive.html';
             
         })
         .catch ((error) =>{
